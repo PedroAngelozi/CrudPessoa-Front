@@ -6,19 +6,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { PessoaService } from './pessoa/services/pessoa.service';
+import { NumericoDirective } from './shared/directives/numerico.directive';
+import { SharedModule } from './shared';
 
+import { AuthModule } from './auth/auth.module';
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PessoaModule
+    PessoaModule,
+    SharedModule,
+    AuthModule
 
   ],
   providers: [
-    PessoaService
+
   ],
   bootstrap: [AppComponent]
 })
